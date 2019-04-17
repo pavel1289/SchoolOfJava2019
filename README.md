@@ -1,1 +1,1 @@
-# EndavaSchoolOfJava2019
+# SchoolOfJava2019
