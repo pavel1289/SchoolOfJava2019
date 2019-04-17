@@ -29,4 +29,22 @@ public class CardService {
         }
         return null;
     }
+
+    public void addTransactionToCard(Transaction transaction, Card card) {
+        card.addTransaction(transaction);
+    }
+
+    public List<Transaction> getTransactionsByCard(Card card) {
+        return card.getTransactions();
+    }
+
+    public Transaction getTransactionByDateInCard(String date, Card card) {
+        List<Transaction> transactions = card.getTransactions();
+        for (Transaction transaction : transactions) {
+            if (transaction.getDate().equals(date)) {
+                return transaction;
+            }
+        }
+        return null;
+    }
 }

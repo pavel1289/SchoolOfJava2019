@@ -30,4 +30,18 @@ public class CardController {
         ResponseEntity<Card> responseEntity = new ResponseEntity<>(card, HttpStatus.OK);
         return responseEntity;
     }
+
+    @PostMapping(path = "/add/transaction")
+    public void addTransaction(@RequestBody Transaction transaction, Card card) {
+        cardService.addTransactionToCard(transaction, card);
+    }
+
+    @GetMapping(path = "/get/transaction/{name}/{date}")
+    public ResponseEntity<Transaction> getTransactionByDateInCard(@PathVariable String name, @PathVariable String date) {
+        Card card = cardService.getCardByOwnerName(name);
+        Transaction transaction = cardService.getTransactionByDateInCard(date, card);
+        ResponseEntity<Transaction> responseEntity = new ResponseEntity<>(transaction, HttpStatus.OK);
+        return responseEntity;
+
+    }
 }

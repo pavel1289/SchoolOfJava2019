@@ -4,6 +4,7 @@ public class Card {
     BankAccount bankAccount;
     String ownerName;
     String cnp;
+    List<Transaction> transactions = new ArrayList<>();
 
     public BankAccount getBankAccount() {
         return bankAccount;
@@ -27,5 +28,13 @@ public class Card {
 
     public void setCnp(String cnp) {
         this.cnp = cnp;
+    }
+
+    public List<Transaction> getTransactions() {
+        return transactions;
+    }
+
+    public void addTransaction(Transaction transaction) {
+        transactions.add(transaction);
     }
 }
