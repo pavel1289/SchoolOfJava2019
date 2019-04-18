@@ -1,5 +1,8 @@
 package com.example.Day3SpringBoot.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Card {
     BankAccount bankAccount;
     String ownerName;

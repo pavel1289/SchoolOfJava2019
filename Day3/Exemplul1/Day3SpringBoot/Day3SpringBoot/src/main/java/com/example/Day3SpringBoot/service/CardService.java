@@ -1,6 +1,7 @@
 package com.example.Day3SpringBoot.service;
 
 import com.example.Day3SpringBoot.model.Card;
+import com.example.Day3SpringBoot.model.Transaction;
 import com.example.Day3SpringBoot.repositories.CardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
